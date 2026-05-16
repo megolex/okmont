@@ -1,367 +1,794 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ООО "ОКМОНТ" | Электромонтаж, видеонаблюдение, вентиляция в Могилеве</title>
-    <meta name="description" content="Профессиональные электромонтажные работы, установка систем видеонаблюдения, вентиляции и кондиционирования в г. Могилев от ООО ОКМОНТ.">
-    <meta name="keywords" content="ОКМОНТ, Могилев, электромонтаж, видеонаблюдение, вентиляция, кондиционирование, инженерные сети">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        brand: {
-                            dark: '#0B1121',
-                            card: '#111827',
-                            primary: '#0EA5E9',
-                            neon: '#38BDF8'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ОКМОНТ — Электромонтаж, видеонаблюдение, вентиляция и кондиционирование в Могилёве | +375 (29) 747-07-20</title>
+<meta name="description" content="ООО «ОКМОНТ» — профессиональные электромонтажные работы, установка видеонаблюдения, монтаж вентиляции и кондиционеров в Могилёве и по всей Беларуси. Гарантия качества, выезд специалиста. Звоните: +375 (29) 747-07-20">
+<meta name="keywords" content="электромонтаж Могилёв, электромонтажные работы Могилёв, установка видеонаблюдения Могилёв, монтаж кондиционеров Могилёв, установка вентиляции Могилёв, электрик Могилёв, ОКМОНТ, электромонтаж Беларусь, видеонаблюдение Беларусь, сплит-система Могилёв, монтаж электропроводки, электрощит Могилёв, IP камеры Могилёв, приточная вентиляция Могилёв, кондиционер купить Могилёв">
+<meta name="robots" content="index, follow">
+<meta name="author" content="ООО ОКМОНТ">
+<meta name="geo.region" content="BY-MO">
+<meta name="geo.placename" content="Могилёв">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ОКМОНТ — Электромонтаж и инженерные системы в Могилёве">
+<meta property="og:description" content="Электромонтаж, видеонаблюдение, вентиляция, кондиционирование. Включаем свет, отключаем проблемы!">
+<meta property="og:image" content="okmont-logo.png">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="okmont-logo.png">
 
-    <!-- Custom Styles -->
-    <style>
-        body {
-            background-color: #0B1121;
-            color: #F8FAFC;
-            overflow-x: hidden;
-        }
-        
-        .glass-header {
-            background: rgba(11, 17, 33, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .glass-card {
-            background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-        }
+<!-- TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
 
-        .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.3);
-            border-color: rgba(56, 189, 248, 0.3);
-        }
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-        .neon-text {
-            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-        }
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-        .hero-glow {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(14,165,233,0.15) 0%, rgba(11,17,33,0) 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            pointer-events: none;
+<!-- Three.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'okm-dark': '#0E3454',
+          'okm-blue': '#1A86DB',
+          'okm-gray': '#84909C',
+        },
+        fontFamily: {
+          'orbitron': ['Orbitron', 'sans-serif'],
+          'inter': ['Inter', 'sans-serif'],
         }
-        
-        /* Скрытие элементов до загрузки анимации */
-        .gsap-hide { visibility: hidden; }
-    </style>
+      }
+    }
+  }
+</script>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ООО ОКМОНТ",
+  "image": "okmont-logo.png",
+  "telephone": "+375297470720",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Могилёв",
+    "addressCountry": "BY"
+  },
+  "description": "Электромонтажные работы, видеонаблюдение, вентиляция, кондиционирование в Могилёве",
+  "slogan": "Включаем свет, отключаем проблемы!"
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0E3454;
+    color: #fff;
+    overflow-x: hidden;
+    margin: 0;
+  }
+  h1, h2, h3, .font-orbitron { font-family: 'Orbitron', sans-serif; }
+
+  /* PCB Background */
+  .pcb-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(rgba(26,134,219,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,134,219,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .pcb-bg::before {
+    content:'';
+    position:absolute; inset:0;
+    background: radial-gradient(circle at 20% 30%, rgba(26,134,219,0.15), transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(26,134,219,0.12), transparent 40%);
+  }
+
+  /* Three.js canvas */
+  #three-canvas { position: fixed; inset:0; z-index:1; pointer-events:none; }
+
+  /* Glow */
+  .neon-text { text-shadow: 0 0 10px #1A86DB, 0 0 20px #1A86DB, 0 0 40px rgba(26,134,219,0.5); }
+  .neon-glow { box-shadow: 0 0 15px rgba(26,134,219,0.6), 0 0 30px rgba(26,134,219,0.3), inset 0 0 15px rgba(26,134,219,0.1); }
+  .neon-border { border: 1px solid #1A86DB; box-shadow: 0 0 10px rgba(26,134,219,0.4), inset 0 0 10px rgba(26,134,219,0.1); }
+
+  /* Pulse logo */
+  @keyframes pulse-glow {
+    0%, 100% { filter: drop-shadow(0 0 20px #1A86DB) drop-shadow(0 0 40px rgba(26,134,219,0.6)); }
+    50% { filter: drop-shadow(0 0 35px #1A86DB) drop-shadow(0 0 70px rgba(26,134,219,0.8)); }
+  }
+  .logo-hero { animation: pulse-glow 2.5s ease-in-out infinite; }
+
+  /* Preloader */
+  #preloader {
+    position: fixed; inset:0; background:#05121F; z-index:9999;
+    display: flex; flex-direction:column; align-items:center; justify-content:center;
+    transition: opacity .8s ease;
+  }
+  .bulb-svg {
+    width: 80px; height: 80px;
+    color: #0E3454;
+    animation: flicker-svg 1.6s steps(2) 0s 2;
+  }
+  @keyframes flicker-svg {
+    0%, 40%, 60%, 100% { color: #0E3454; filter: none; }
+    20%, 50%, 80% { color: #1A86DB; filter: drop-shadow(0 0 20px #1A86DB); }
+  }
+  .bulb-svg.on {
+    color: #fff;
+    filter: drop-shadow(0 0 20px #1A86DB) drop-shadow(0 0 40px #1A86DB) drop-shadow(0 0 60px rgba(26,134,219,0.5));
+  }
+  .preload-text {
+    margin-top:30px; font-family:'Orbitron'; font-size:2rem; letter-spacing:.1em; color:#fff;
+    text-shadow: 0 0 10px #1A86DB, 0 0 20px #1A86DB;
+    min-height: 48px;
+    border-right: 3px solid #1A86DB;
+    padding-right: 5px;
+    animation: cursor-blink .8s infinite;
+  }
+  .preload-text.done { border-right-color: transparent; animation: none; }
+  @keyframes cursor-blink { 50% { border-right-color: transparent; } }
+
+  /* Custom Cursor */
+  #cursor-core, #cursor-reticle {
+    position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998;
+    transform: translate(-50%, -50%);
+  }
+  #cursor-core {
+    width: 6px; height: 6px;
+    background: #fff;
+    box-shadow: 0 0 10px #1A86DB, 0 0 20px #1A86DB;
+    transition: transform 0.2s, background 0.2s;
+  }
+  #cursor-core.hover {
+    transform: translate(-50%, -50%) scale(2) rotate(45deg);
+    background: #1A86DB;
+  }
+  #cursor-reticle {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(26, 134, 219, 0.3);
+    transition: width 0.3s, height 0.3s, border-color 0.3s, border-radius 0.3s;
+  }
+  #cursor-reticle::before, #cursor-reticle::after {
+    content: ''; position: absolute; width: 10px; height: 10px;
+    border: 2px solid #1A86DB; transition: all 0.3s;
+  }
+  #cursor-reticle::before { top: -2px; left: -2px; border-right: none; border-bottom: none; }
+  #cursor-reticle::after { bottom: -2px; right: -2px; border-left: none; border-top: none; }
+
+  #cursor-reticle.hover {
+    width: 55px; height: 55px;
+    border-color: rgba(26, 134, 219, 0.1);
+    border-radius: 50%;
+    animation: spin-cyber 2s linear infinite;
+  }
+  #cursor-reticle.hover::before, #cursor-reticle.hover::after {
+    border-color: #fff;
+    box-shadow: 0 0 10px #1A86DB;
+    border-radius: 50%;
+  }
+  @keyframes spin-cyber {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  @media (pointer: coarse) { #cursor-core, #cursor-reticle { display: none; } body { cursor: auto; } }
+  @media (pointer: fine) { body, a, button { cursor: none; } }
+
+  /* Header */
+  .header-glass {
+    background: rgba(14,52,84,0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(26,134,219,0.3);
+    transition: all .3s ease;
+  }
+  .header-glass.shrunk { padding-top:.25rem; padding-bottom:.25rem; }
+  .header-glass.shrunk .logo-h { width: 60px; height: auto; }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-block;
+    text-align: center;
+    background: #1A86DB; color:#fff;
+    padding: 14px 32px; border-radius:8px;
+    font-weight:600; letter-spacing:.05em;
+    position:relative; overflow:hidden;
+    box-shadow: 0 0 20px rgba(26,134,219,0.6), inset 0 0 10px rgba(255,255,255,0.1);
+    transition: all .3s;
+    min-height:44px;
+  }
+  .btn-primary:hover { box-shadow: 0 0 30px #1A86DB, 0 0 60px rgba(26,134,219,0.5); transform: translateY(-2px); }
+  .btn-primary::before {
+    content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left .6s;
+    pointer-events: none; /* Запрещаем перехват кликов анимацией */
+  }
+  .btn-primary:hover::before { left:100%; }
+
+  .btn-outline {
+    display: inline-block;
+    text-align: center;
+    background: transparent; color:#1A86DB;
+    padding: 14px 32px; border-radius:8px;
+    font-weight:600; letter-spacing:.05em;
+    border:2px solid #1A86DB;
+    transition: all .3s;
+    min-height:44px;
+  }
+  .btn-outline:hover { background:#1A86DB; color:#fff; box-shadow: 0 0 25px #1A86DB; }
+
+  /* Typewriter */
+  .typewriter { display:inline-block; border-right: 2px solid #1A86DB; padding-right:4px; white-space:nowrap; overflow:hidden; }
+  @keyframes blink { 50% { border-color: transparent; } }
+  .typewriter { animation: blink 0.8s step-end infinite; }
+
+  /* Scroll arrow */
+  .scroll-arrow {
+    position:absolute; bottom:20px; left:50%; transform:translateX(-50%);
+    color:#1A86DB; animation: bounce 2s infinite; z-index: 10;
+  }
+  @keyframes bounce {
+    0%,100% { transform: translateX(-50%) translateY(0); opacity:1; }
+    50% { transform: translateX(-50%) translateY(15px); opacity:.5; }
+  }
+
+  /* Service Cards */
+  .service-card {
+    background: linear-gradient(135deg, rgba(14,52,84,0.9), rgba(14,52,84,0.6));
+    border: 1px solid rgba(26,134,219,0.4);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all .4s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(26,134,219,0.15), inset 0 0 20px rgba(26,134,219,0.05);
+  }
+  .service-card::before {
+    content:''; position:absolute; inset:-1px; border-radius:16px;
+    background: linear-gradient(135deg, transparent, rgba(26,134,219,0.6), transparent);
+    z-index:-1; opacity:0; transition: opacity .4s;
+  }
+  .service-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 40px rgba(26,134,219,0.5), 0 0 60px rgba(26,134,219,0.3);
+    border-color: #1A86DB;
+  }
+  .service-card:hover .svc-icon { transform: scale(1.15) rotate(8deg); filter: drop-shadow(0 0 20px #1A86DB); }
+  .svc-icon { transition: all .4s; filter: drop-shadow(0 0 8px #1A86DB); }
+
+  /* Section divider */
+  .divider-line {
+    width: 120px; height: 3px;
+    background: linear-gradient(90deg, transparent, #1A86DB, transparent);
+    margin: 20px auto 40px;
+    box-shadow: 0 0 15px #1A86DB;
+    position:relative; overflow:hidden;
+  }
+  .divider-line::after {
+    content:''; position:absolute; top:0; left:-30px; width:30px; height:100%;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    animation: divider-pulse 3s ease-in-out infinite;
+  }
+  @keyframes divider-pulse {
+    0% { left:-30px; } 100% { left:120px; }
+  }
+
+  /* Phone link */
+  .phone-big {
+    font-family:'Orbitron'; font-size: clamp(1.6rem, 5vw, 3rem);
+    color:#fff; text-shadow: 0 0 15px #1A86DB, 0 0 30px #1A86DB;
+    transition: all .3s; display:inline-flex; align-items:center; gap:14px;
+  }
+  .phone-big:hover { transform: scale(1.05); text-shadow: 0 0 25px #fff, 0 0 50px #1A86DB; }
+  .phone-icon { animation: pulse-icon 1.8s ease-in-out infinite; }
+  @keyframes pulse-icon {
+    0%,100% { transform: scale(1); filter: drop-shadow(0 0 10px #1A86DB); }
+    50% { transform: scale(1.15); filter: drop-shadow(0 0 25px #1A86DB); }
+  }
+
+  /* PCB line with impulse */
+  .pcb-line { position: relative; height:2px; background: rgba(26,134,219,0.25); overflow:hidden; }
+  .pcb-line::after {
+    content:''; position:absolute; top:-3px; left:-20px; width:20px; height:8px;
+    background: radial-gradient(circle, #fff, #1A86DB, transparent);
+    box-shadow: 0 0 15px #1A86DB;
+    animation: impulse-run 4s linear infinite;
+    border-radius:50%;
+  }
+  @keyframes impulse-run {
+    0% { left:-20px; } 100% { left:100%; }
+  }
+
+  /* Burger */
+  .burger span { display:block; width:26px; height:2px; background:#1A86DB; margin:5px 0; transition: all .3s; box-shadow: 0 0 6px #1A86DB; }
+  .burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.active span:nth-child(2) { opacity:0; }
+  .burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    position:fixed; top:0; right:-100%; width:80%; max-width:320px; height:100vh;
+    background: rgba(14,52,84,0.97); backdrop-filter: blur(15px);
+    z-index:90; transition: right .4s ease;
+    padding: 80px 30px 30px;
+    border-left: 1px solid rgba(26,134,219,0.4);
+  }
+  .mobile-menu.open { right:0; }
+
+  /* Section bg */
+  section { position: relative; z-index: 2; }
+
+  /* Footer */
+  footer { position: relative; z-index:2; border-top:1px solid rgba(26,134,219,0.4); box-shadow: 0 -2px 20px rgba(26,134,219,0.3); }
+
+  .text-gray-okm { color:#84909C; }
+
+  /* Disable heavy effects on mobile */
+  @media (max-width: 768px) {
+    #three-canvas { opacity: 0.5; }
+  }
+</style>
 </head>
-<body class="antialiased">
+<body class="font-inter">
 
-    <!-- Навигация -->
-    <header class="fixed w-full top-0 z-50 glass-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Логотип -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <img src="okmont-logo.png" alt="ОКМОНТ Логотип" class="h-10 w-auto mr-3" onerror="this.src='https://via.placeholder.com/150x50/0B1121/0EA5E9?text=ОКМОНТ'">
-                    <span class="font-bold text-xl tracking-wider text-white">ОКМОНТ</span>
-                </div>
-                
-                <!-- Десктопное меню -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-brand-neon transition-colors duration-300 text-sm uppercase tracking-wide font-semibold">Главная</a>
-                    <a href="#services" class="text-gray-300 hover:text-brand-neon transition-colors duration-300 text-sm uppercase tracking-wide font-semibold">Услуги</a>
-                    <a href="#contact" class="text-gray-300 hover:text-brand-neon transition-colors duration-300 text-sm uppercase tracking-wide font-semibold">Контакты</a>
-                </nav>
+<!-- PRELOADER -->
+<div id="preloader" aria-hidden="true">
+  <!-- Векторная иконка лампочки -->
+  <svg class="bulb-svg" id="bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.9 1.2 1.5 1.5 2.5"/>
+    <path d="M9 18h6"/>
+    <path d="M10 22h4"/>
+  </svg>
+  <div class="preload-text" id="preloadText"></div>
+</div>
 
-                <!-- Телефон десктоп -->
-                <div class="hidden md:block">
-                    <a href="tel:+375297470720" class="text-brand-primary font-bold hover:text-brand-neon transition-colors text-lg flex items-center">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        +375 (29) 747-07-20
-                    </a>
-                </div>
+<!-- Custom cursor -->
+<div id="cursor-reticle"></div>
+<div id="cursor-core"></div>
 
-                <!-- Бургер-кнопка (Мобильная) -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+<!-- PCB Background -->
+<div class="pcb-bg"></div>
+<canvas id="three-canvas"></canvas>
+
+<!-- HEADER -->
+<header class="header-glass fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-3" id="header">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3" aria-label="ОКМОНТ - на главную">
+      <img src="okmont-logo.png" alt="Логотип ОКМОНТ" class="logo-h w-[85px] h-auto transition-all object-contain" style="filter: drop-shadow(0 0 8px #1A86DB);">
+      <div>
+        <div class="font-orbitron text-white text-lg md:text-xl font-bold tracking-wider">ОКМОНТ</div>
+        <div class="text-xs text-gray-okm hidden sm:block">Электромонтаж • Видеонаблюдение • Климат</div>
+      </div>
+    </a>
+    <ul class="hidden md:flex items-center gap-8 font-orbitron text-sm tracking-wider">
+      <li><a href="#home" class="text-white hover:text-okm-blue transition" title="Главная">ГЛАВНАЯ</a></li>
+      <li><a href="#services" class="text-white hover:text-okm-blue transition" title="Услуги">УСЛУГИ</a></li>
+      <li><a href="#contacts" class="text-white hover:text-okm-blue transition" title="Контакты">КОНТАКТЫ</a></li>
+      <li><a href="tel:+375297470720" class="btn-primary ml-2 !py-2 !px-4 text-xs" title="Позвонить">+375 (29) 747-07-20</a></li>
+    </ul>
+    <button class="burger md:hidden" id="burger" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile menu -->
+<aside class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+  <ul class="flex flex-col gap-6 font-orbitron text-lg">
+    <li><a href="#home" class="text-white hover:text-okm-blue mobile-link">ГЛАВНАЯ</a></li>
+    <li><a href="#services" class="text-white hover:text-okm-blue mobile-link">УСЛУГИ</a></li>
+    <li><a href="#contacts" class="text-white hover:text-okm-blue mobile-link">КОНТАКТЫ</a></li>
+    <li class="mt-4"><a href="tel:+375297470720" class="btn-primary inline-block text-sm">+375 (29) 747-07-20</a></li>
+  </ul>
+</aside>
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex flex-col items-center justify-center px-4 relative pt-20 pb-28 md:pb-32">
+  <div class="text-center max-w-5xl mx-auto z-10">
+    <img src="okmont-logo.png" alt="ОКМОНТ логотип" class="logo-hero mx-auto w-[220px] md:w-[320px] h-auto mb-6 object-contain" data-aos="zoom-in">
+    <h1 class="font-orbitron font-black text-4xl sm:text-5xl md:text-7xl text-white neon-text mb-4" data-aos="fade-up">
+      ООО «ОКМОНТ»
+    </h1>
+    <div class="h-10 mb-4 flex items-center justify-center">
+      <p class="text-xl md:text-2xl text-okm-blue font-orbitron typewriter" id="typewriter">⚡ «Включаем свет, отключаем проблемы!»</p>
+    </div>
+    <p class="text-okm-gray text-base md:text-lg max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="400">
+      Профессиональные электромонтажные работы, монтаж систем видеонаблюдения, вентиляции и кондиционирования в Могилёве и по всей Беларуси.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-20" data-aos="fade-up" data-aos-delay="600">
+      <a href="#services" class="btn-primary" title="Перейти к услугам">Наши услуги</a>
+      <a href="#contacts" class="btn-outline" title="Связаться с нами">Связаться с нами</a>
+    </div>
+  </div>
+  <a href="#services" class="scroll-arrow" aria-label="Прокрутить вниз">
+    <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+  </a>
+</section>
+
+<!-- PCB line -->
+<div class="pcb-line max-w-6xl mx-auto"></div>
+
+<!-- SERVICES -->
+<section id="services" class="py-20 md:py-32 px-4">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="font-orbitron text-4xl md:text-6xl text-center text-white neon-text" data-aos="fade-right">Наши услуги</h2>
+    <div class="divider-line"></div>
+    <p class="text-center text-okm-gray max-w-2xl mx-auto mb-12" data-aos="fade-up">
+      Полный спектр электромонтажных и инженерных работ «под ключ» — от проектирования до сервисного обслуживания.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+      <!-- Card 1 -->
+      <article class="service-card tilt-card" data-aos="fade-up">
+        <div class="flex items-start gap-4 mb-4">
+          <svg class="svc-icon w-14 h-14 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="#1A86DB" stroke-width="2"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="rgba(26,134,219,0.2)"/></svg>
+          <div>
+            <h3 class="font-orbitron text-xl md:text-2xl text-white mb-2">Электромонтажные работы</h3>
+            <p class="text-okm-gray text-sm">Профессиональный электромонтаж «под ключ» для квартир, частных домов, офисов и промышленных объектов. Гарантия качества и безопасности.</p>
+          </div>
+        </div>
+        <ul class="space-y-2 text-sm text-white/90 mt-4">
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Прокладка электропроводки (открытая/скрытая)</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Монтаж и сборка электрощитов</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Установка розеток, выключателей, освещения</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Заземление и молниезащита</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Проектирование электросетей</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Аварийные работы 24/7</li>
+        </ul>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="service-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex items-start gap-4 mb-4">
+          <svg class="svc-icon w-14 h-14 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="#1A86DB" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="2" fill="rgba(26,134,219,0.2)"/><path d="M22 8l-6 4 6 4V8z"/></svg>
+          <div>
+            <h3 class="font-orbitron text-xl md:text-2xl text-white mb-2">Системы видеонаблюдения</h3>
+            <p class="text-okm-gray text-sm">Установка и настройка современных систем видеонаблюдения для дома и бизнеса. Удалённый доступ через смартфон.</p>
+          </div>
+        </div>
+        <ul class="space-y-2 text-sm text-white/90 mt-4">
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Аналоговое и IP-видеонаблюдение</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Камеры высокого разрешения (Full HD, 4K)</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Системы записи и архивирования</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Удалённый просмотр со смартфона</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Системы контроля доступа (СКУД)</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Охранно-пожарная сигнализация</li>
+        </ul>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="service-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-start gap-4 mb-4">
+          <svg class="svc-icon w-14 h-14 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="#1A86DB" stroke-width="2"><path d="M3 8h12a3 3 0 100-6M3 12h16a3 3 0 110 6M3 16h10" stroke-linecap="round"/></svg>
+          <div>
+            <h3 class="font-orbitron text-xl md:text-2xl text-white mb-2">Вентиляция</h3>
+            <p class="text-okm-gray text-sm">Проектирование и монтаж приточно-вытяжных систем вентиляции для жилых и коммерческих помещений.</p>
+          </div>
+        </div>
+        <ul class="space-y-2 text-sm text-white/90 mt-4">
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Приточно-вытяжная вентиляция</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Рекуператоры тепла</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Промышленная вентиляция</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Расчёт и проектирование систем</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Прокладка воздуховодов</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Сервисное обслуживание</li>
+        </ul>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="service-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex items-start gap-4 mb-4">
+          <svg class="svc-icon w-14 h-14 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="#1A86DB" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
+          <div>
+            <h3 class="font-orbitron text-xl md:text-2xl text-white mb-2">Кондиционирование</h3>
+            <p class="text-okm-gray text-sm">Подбор, продажа и установка кондиционеров любых типов и мощности. Гарантия и сервисное обслуживание.</p>
+          </div>
+        </div>
+        <ul class="space-y-2 text-sm text-white/90 mt-4">
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Установка бытовых сплит-систем</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Мульти-сплит системы</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Канальные и кассетные кондиционеры</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>VRF/VRV системы для бизнеса</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Заправка фреоном и чистка</li>
+          <li class="flex gap-2"><span class="text-okm-blue">▸</span>Гарантийный сервис</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="pcb-line max-w-6xl mx-auto"></div>
+
+<!-- CONTACTS -->
+<section id="contacts" class="py-20 md:py-32 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="font-orbitron text-4xl md:text-6xl text-white neon-text" data-aos="fade-right">Свяжитесь с нами</h2>
+    <div class="divider-line"></div>
+
+    <div class="service-card neon-glow !p-8 md:!p-12 mt-8" data-aos="zoom-in">
+      <div class="flex flex-col items-center gap-6">
+        <div class="flex items-center gap-3 text-white">
+          <svg class="w-7 h-7 text-okm-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="filter: drop-shadow(0 0 8px #1A86DB);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="text-lg md:text-xl">г. Могилёв, Республика Беларусь</span>
         </div>
 
-        <!-- Мобильное меню -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 backdrop-blur-md border-b border-gray-800">
-            <div class="px-2 pt-2 pb-6 space-y-1 sm:px-3 text-center">
-                <a href="#home" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Главная</a>
-                <a href="#services" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Услуги</a>
-                <a href="#contact" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md">Контакты</a>
-                <a href="tel:+375297470720" class="block mt-4 px-3 py-3 text-lg font-bold text-brand-neon">+375 (29) 747-07-20</a>
-            </div>
-        </div>
-    </header>
+        <a href="tel:+375297470720" class="phone-big" aria-label="Позвонить +375 29 747-07-20" title="Позвонить">
+          <svg class="phone-icon w-10 h-10 text-okm-blue" fill="#1A86DB" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24c1.12.45 2.33.69 3.54.69a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.25 2.45.69 3.57a1 1 0 01-.25 1.05l-2.32 2.17z"/></svg>
+          +375 (29) 747-07-20
+        </a>
 
-    <!-- Главный экран (Hero) -->
-    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
-        <div class="hero-glow"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="hero-el gsap-hide text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
-                Профессиональные инженерные системы<br class="hidden md:block" /> в <span class="text-brand-primary neon-text">Могилеве</span>
-            </h1>
-            <p class="hero-el gsap-hide mt-4 text-xl text-gray-400 max-w-3xl mx-auto mb-10">
-                ООО «ОКМОНТ» — ваш надежный партнер. Выполняем электромонтажные работы, установку систем видеонаблюдения, вентиляции и кондиционирования под ключ для бизнеса и частных лиц.
-            </p>
-            <div class="hero-el gsap-hide flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#services" class="px-8 py-4 bg-brand-primary hover:bg-brand-neon text-white font-bold rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(14,165,233,0.5)] hover:shadow-[0_0_25px_rgba(56,189,248,0.7)]">
-                    Наши услуги
-                </a>
-                <a href="#contact" class="px-8 py-4 bg-transparent border border-gray-600 hover:border-brand-primary text-white font-bold rounded-lg transition-all duration-300 hover:bg-gray-800/50">
-                    Связаться с нами
-                </a>
-            </div>
-        </div>
-    </section>
+        <div class="w-full max-w-md pcb-line my-2"></div>
 
-    <!-- Услуги -->
-    <section id="services" class="py-20 bg-brand-dark/50 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 section-header gsap-hide">
-                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Наши <span class="text-brand-primary">Услуги</span></h2>
-                <div class="w-24 h-1 bg-brand-primary mx-auto rounded-full mb-6 shadow-[0_0_10px_rgba(14,165,233,0.5)]"></div>
-                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Высококачественный монтаж и обслуживание инженерных сетей с гарантией качества.</p>
-            </div>
+        <p class="text-okm-gray text-base md:text-lg">
+          📞 Звоните прямо сейчас — <span class="text-okm-blue font-semibold">бесплатная консультация</span> и выезд специалиста!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Услуга 1 -->
-                <div class="service-card gsap-hide glass-card p-8 rounded-2xl flex flex-col items-start h-full">
-                    <div class="bg-gray-800/50 p-4 rounded-xl text-brand-primary mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Электромонтаж</h3>
-                    <p class="text-gray-400 flex-grow text-sm leading-relaxed mb-6">
-                        Полный комплекс работ: от проектирования до сдачи объекта. Замена проводки, сборка электрощитов, монтаж освещения и розеток для промышленных и жилых объектов.
-                    </p>
-                    <a href="#contact" class="text-brand-primary font-semibold hover:text-brand-neon inline-flex items-center text-sm transition-colors mt-auto">
-                        Заказать <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
+</main>
 
-                <!-- Услуга 2 -->
-                <div class="service-card gsap-hide glass-card p-8 rounded-2xl flex flex-col items-start h-full">
-                    <div class="bg-gray-800/50 p-4 rounded-xl text-brand-primary mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Видеонаблюдение</h3>
-                    <p class="text-gray-400 flex-grow text-sm leading-relaxed mb-6">
-                        Современные системы безопасности. Установка цифровых IP-камер, настройка удаленного доступа со смартфона, организация надежного хранения видеоархивов.
-                    </p>
-                    <a href="#contact" class="text-brand-primary font-semibold hover:text-brand-neon inline-flex items-center text-sm transition-colors mt-auto">
-                        Заказать <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
+<!-- FOOTER -->
+<footer class="bg-okm-dark/80 py-12 px-4 mt-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="flex flex-col items-center md:items-start gap-3">
+      <img src="okmont-logo.png" alt="Логотип ОКМОНТ" class="w-[110px] h-auto object-contain" style="filter: drop-shadow(0 0 15px #1A86DB);">
+      <div class="font-orbitron text-white text-lg">ОКМОНТ</div>
+      <p class="text-okm-blue text-sm italic">«Включаем свет, отключаем проблемы!»</p>
+    </div>
+    <div class="text-center md:text-left">
+      <h4 class="font-orbitron text-white mb-4">Навигация</h4>
+      <ul class="space-y-2">
+        <li><a href="#home" class="text-okm-gray hover:text-okm-blue transition">Главная</a></li>
+        <li><a href="#services" class="text-okm-gray hover:text-okm-blue transition">Услуги</a></li>
+        <li><a href="#contacts" class="text-okm-gray hover:text-okm-blue transition">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="text-center md:text-left">
+      <h4 class="font-orbitron text-white mb-4">Контакты</h4>
+      <ul class="space-y-2 text-okm-gray">
+        <li><a href="tel:+375297470720" class="hover:text-okm-blue transition" title="Позвонить">+375 (29) 747-07-20</a></li>
+        <li>г. Могилёв, Беларусь</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto mt-10 pt-6 border-t border-okm-blue/20 text-center text-okm-gray text-sm">
+    © 2026 ООО «ОКМОНТ». Все права защищены.
+  </div>
+</footer>
 
-                <!-- Услуга 3 -->
-                <div class="service-card gsap-hide glass-card p-8 rounded-2xl flex flex-col items-start h-full">
-                    <div class="bg-gray-800/50 p-4 rounded-xl text-brand-primary mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Вентиляция</h3>
-                    <p class="text-gray-400 flex-grow text-sm leading-relaxed mb-6">
-                        Проектирование и профессиональный монтаж приточно-вытяжных систем. Обеспечение комфортного и безопасного микроклимата в офисах, цехах и коттеджах.
-                    </p>
-                    <a href="#contact" class="text-brand-primary font-semibold hover:text-brand-neon inline-flex items-center text-sm transition-colors mt-auto">
-                        Заказать <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
+<script>
+/* =================== PRELOADER =================== */
+window.addEventListener('load', () => {
+  // Light bulb sequence
+  setTimeout(() => document.getElementById('bulb').classList.add('on'), 1700);
+  
+  // Typewriter for preload text
+  const preloadTextEl = document.getElementById('preloadText');
+  const textToType = 'ООО «ОКМОНТ»';
+  let charIndex = 0;
+  
+  function typePreload() {
+    if (charIndex < textToType.length) {
+      preloadTextEl.textContent += textToType.charAt(charIndex);
+      charIndex++;
+      setTimeout(typePreload, 80); // Скорость печати
+    } else {
+      preloadTextEl.classList.add('done'); // Отключаем курсор
+      // Hide preloader
+      setTimeout(() => {
+        const pl = document.getElementById('preloader');
+        if (pl) {
+          pl.style.opacity = '0';
+          setTimeout(() => pl.style.display = 'none', 800);
+        }
+      }, 600);
+    }
+  }
+  
+  // Start typing when bulb turns on
+  setTimeout(typePreload, 1700);
+});
 
-                <!-- Услуга 4 -->
-                <div class="service-card gsap-hide glass-card p-8 rounded-2xl flex flex-col items-start h-full">
-                    <div class="bg-gray-800/50 p-4 rounded-xl text-brand-primary mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Кондиционирование</h3>
-                    <p class="text-gray-400 flex-grow text-sm leading-relaxed mb-6">
-                        Установка, пусконаладка, обслуживание и ремонт кондиционеров и сплит-систем ведущих мировых брендов. Работаем быстро и без пыли.
-                    </p>
-                    <a href="#contact" class="text-brand-primary font-semibold hover:text-brand-neon inline-flex items-center text-sm transition-colors mt-auto">
-                        Заказать <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+/* =================== AOS =================== */
+AOS.init({ duration: 900, easing: 'ease-out-cubic', once: true, offset: 80 });
 
-    <!-- Контакты -->
-    <section id="contact" class="py-20 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-gray-800/30 rounded-3xl p-8 lg:p-12 border border-gray-700/50 contact-wrap gsap-hide">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    
-                    <!-- Инфо -->
-                    <div>
-                        <h2 class="text-3xl font-bold text-white mb-6">Готовы обсудить <span class="text-brand-primary">проект?</span></h2>
-                        <p class="text-gray-400 mb-8 text-lg">Свяжитесь с нами для бесплатной консультации и расчета стоимости работ в г. Могилев и области.</p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="bg-brand-primary/10 p-3 rounded-lg text-brand-primary mr-4">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-500 font-medium mb-1">Телефон</p>
-                                    <a href="tel:+375297470720" class="text-xl font-bold text-white hover:text-brand-primary transition-colors">+375 (29) 747-07-20</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <div class="bg-brand-primary/10 p-3 rounded-lg text-brand-primary mr-4">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-500 font-medium mb-1">Офис / Работаем по</p>
-                                    <p class="text-lg font-medium text-white">г. Могилев и Могилевская область</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+/* =================== CUSTOM CURSOR =================== */
+(function(){
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  const core = document.getElementById('cursor-core');
+  const reticle = document.getElementById('cursor-reticle');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove', e => {
+    mx=e.clientX; my=e.clientY;
+    core.style.left = mx+'px'; core.style.top = my+'px';
+  });
+  function loop(){
+    rx += (mx-rx)*0.2; ry += (my-ry)*0.2;
+    reticle.style.left = rx+'px'; reticle.style.top = ry+'px';
+    requestAnimationFrame(loop);
+  }
+  loop();
+  document.querySelectorAll('a, button, .service-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      reticle.classList.add('hover');
+      core.classList.add('hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      reticle.classList.remove('hover');
+      core.classList.remove('hover');
+    });
+  });
+})();
 
-                    <!-- Форма -->
-                    <div class="glass-card p-8 rounded-2xl">
-                        <form onsubmit="event.preventDefault(); alert('Спасибо за заявку! В реальном проекте здесь будет отправка на почту или в Telegram.');">
-                            <div class="mb-5">
-                                <label class="block text-sm font-medium text-gray-400 mb-2">Ваше имя</label>
-                                <input type="text" required class="w-full bg-gray-900/50 border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-brand-primary transition-colors" placeholder="Иван Иванов">
-                            </div>
-                            <div class="mb-5">
-                                <label class="block text-sm font-medium text-gray-400 mb-2">Телефон</label>
-                                <input type="tel" required class="w-full bg-gray-900/50 border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-brand-primary transition-colors" placeholder="+375 (XX) XXX-XX-XX">
-                            </div>
-                            <div class="mb-6">
-                                <label class="block text-sm font-medium text-gray-400 mb-2">Интересующая услуга</label>
-                                <select class="w-full bg-gray-900/50 border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-brand-primary transition-colors appearance-none">
-                                    <option>Электромонтаж</option>
-                                    <option>Видеонаблюдение</option>
-                                    <option>Вентиляция</option>
-                                    <option>Кондиционирование</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="w-full py-4 bg-brand-primary hover:bg-brand-neon text-white font-bold rounded-lg transition-all duration-300 shadow-[0_0_15px_rgba(14,165,233,0.3)] hover:shadow-[0_0_20px_rgba(56,189,248,0.5)]">
-                                Оставить заявку
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* =================== HEADER SHRINK =================== */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) header.classList.add('shrunk'); else header.classList.remove('shrunk');
+});
 
-    <!-- Футер -->
-    <footer class="bg-brand-dark py-8 border-t border-gray-800 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="text-gray-500 text-sm">© 2026 ООО "ОКМОНТ". Все права защищены. Инженерные сети в г. Могилев.</p>
-        </div>
-    </footer>
+/* =================== BURGER =================== */
+const burger = document.getElementById('burger');
+const mm = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  mm.classList.toggle('open');
+});
+document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+  burger.classList.remove('active'); mm.classList.remove('open');
+}));
 
-    <!-- GSAP и Логика -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <script>
-        // Логика бургер-меню
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        const menuLinks = menu.querySelectorAll('a');
+/* =================== TYPEWRITER =================== */
+(function(){
+  const el = document.getElementById('typewriter');
+  const text = el.textContent;
+  el.textContent = '';
+  let i = 0;
+  function type(){
+    if (i <= text.length) { el.textContent = text.slice(0, i); i++; setTimeout(type, 60); }
+  }
+  setTimeout(type, 2900);
+})();
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            if(menu.classList.contains('hidden')) {
-                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16'); // Иконка бургера
-            } else {
-                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12'); // Иконка крестика (X)
-            }
-        });
+/* =================== 3D TILT CARDS =================== */
+document.querySelectorAll('.tilt-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    card.style.transform = `perspective(1000px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-8px) scale(1.02)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
 
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-            });
-        });
+/* =================== GSAP ScrollTrigger =================== */
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('section h2').forEach(h => {
+  gsap.from(h, {
+    scrollTrigger: { trigger: h, start: 'top 85%' },
+    x: -80, opacity: 0, duration: 1, ease: 'power3.out'
+  });
+});
 
-        // GSAP Анимации
-        document.addEventListener("DOMContentLoaded", (event) => {
-            gsap.registerPlugin(ScrollTrigger);
+/* =================== THREE.JS PARTICLES =================== */
+(function(){
+  const canvas = document.getElementById('three-canvas');
+  if (!window.THREE) return;
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha:true, antialias:true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(window.innerWidth, window.innerHeight);
 
-            // Анимация главного экрана (Hero)
-            gsap.fromTo(".hero-el", 
-                { autoAlpha: 0, y: 50 }, 
-                { autoAlpha: 1, y: 0, duration: 1, stagger: 0.2, ease: "power3.out" }
-            );
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(70, window.innerWidth/window.innerHeight, 0.1, 1000);
+  camera.position.z = 60;
 
-            // Анимация заголовка секции услуг
-            gsap.fromTo(".section-header",
-                { autoAlpha: 0, y: 30 },
-                {
-                    scrollTrigger: {
-                        trigger: "#services",
-                        start: "top 80%",
-                    },
-                    autoAlpha: 1, y: 0, duration: 0.8, ease: "power2.out"
-                }
-            );
+  const N = window.innerWidth < 768 ? 60 : 120;
+  const positions = new Float32Array(N*3);
+  const colors = new Float32Array(N*3);
+  const velocities = [];
+  for (let i=0;i<N;i++){
+    positions[i*3]   = (Math.random()-0.5)*120;
+    positions[i*3+1] = (Math.random()-0.5)*80;
+    positions[i*3+2] = (Math.random()-0.5)*60;
+    const isBlue = Math.random() > 0.4;
+    colors[i*3]   = isBlue ? 0.10 : 1;
+    colors[i*3+1] = isBlue ? 0.52 : 1;
+    colors[i*3+2] = isBlue ? 0.86 : 1;
+    velocities.push({x:(Math.random()-0.5)*0.05, y:(Math.random()-0.5)*0.05, z:(Math.random()-0.5)*0.05});
+  }
+  const geom = new THREE.BufferGeometry();
+  geom.setAttribute('position', new THREE.BufferAttribute(positions,3));
+  geom.setAttribute('color', new THREE.BufferAttribute(colors,3));
+  const pMat = new THREE.PointsMaterial({ size:0.6, vertexColors:true, transparent:true, opacity:0.9 });
+  const points = new THREE.Points(geom, pMat);
+  scene.add(points);
 
-            // Анимация карточек услуг (появление по очереди)
-            gsap.fromTo(".service-card",
-                { autoAlpha: 0, y: 40 },
-                {
-                    scrollTrigger: {
-                        trigger: "#services",
-                        start: "top 70%",
-                    },
-                    autoAlpha: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "back.out(1.2)"
-                }
-            );
+  // Lines
+  const lineGeom = new THREE.BufferGeometry();
+  const lineMat = new THREE.LineBasicMaterial({ color:0x1A86DB, transparent:true, opacity:0.18 });
+  const lines = new THREE.LineSegments(lineGeom, lineMat);
+  scene.add(lines);
 
-            // Анимация секции контактов
-            gsap.fromTo(".contact-wrap",
-                { autoAlpha: 0, scale: 0.95 },
-                {
-                    scrollTrigger: {
-                        trigger: "#contact",
-                        start: "top 75%",
-                    },
-                    autoAlpha: 1, scale: 1, duration: 0.8, ease: "power3.out"
-                }
-            );
-        });
-    </script>
+  let mouseX=0, mouseY=0;
+  window.addEventListener('mousemove', e => {
+    mouseX = (e.clientX/window.innerWidth - 0.5);
+    mouseY = (e.clientY/window.innerHeight - 0.5);
+  });
+
+  function updateLines(){
+    const pos = geom.attributes.position.array;
+    const segs = [];
+    for (let i=0;i<N;i++){
+      for (let j=i+1;j<N;j++){
+        const dx = pos[i*3]-pos[j*3], dy = pos[i*3+1]-pos[j*3+1], dz = pos[i*3+2]-pos[j*3+2];
+        const d2 = dx*dx+dy*dy+dz*dz;
+        if (d2 < 100) {
+          segs.push(pos[i*3],pos[i*3+1],pos[i*3+2], pos[j*3],pos[j*3+1],pos[j*3+2]);
+        }
+      }
+    }
+    lineGeom.setAttribute('position', new THREE.Float32BufferAttribute(segs, 3));
+  }
+
+  let frame = 0;
+  function animate(){
+    requestAnimationFrame(animate);
+    const pos = geom.attributes.position.array;
+    for (let i=0;i<N;i++){
+      pos[i*3]   += velocities[i].x;
+      pos[i*3+1] += velocities[i].y;
+      pos[i*3+2] += velocities[i].z;
+      if (Math.abs(pos[i*3])>60) velocities[i].x*=-1;
+      if (Math.abs(pos[i*3+1])>40) velocities[i].y*=-1;
+      if (Math.abs(pos[i*3+2])>30) velocities[i].z*=-1;
+    }
+    geom.attributes.position.needsUpdate = true;
+    if (frame % 6 === 0) updateLines();
+    frame++;
+
+    points.rotation.y += 0.0008;
+    points.rotation.x += 0.0003;
+    camera.position.x += (mouseX*10 - camera.position.x)*0.04;
+    camera.position.y += (-mouseY*10 - camera.position.y)*0.04;
+    camera.lookAt(scene.position);
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth/window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+})();
+</script>
+
 </body>
 </html>
